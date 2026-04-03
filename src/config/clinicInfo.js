@@ -9,4 +9,6 @@ export const CLINIC = {
   instagramHandle: '@aliviohomoeo',
   /** Replace `public/alivio-logo.svg` with your `ALIVIO_1 (1).svg` artwork if you prefer. */
   logoSvg: '/alivio-logo.svg',
+  /** Text-free mark for the hero banner (avoids duplicating the wordmark). */
+  logoMark: '/alivio-mark.svg',
 };

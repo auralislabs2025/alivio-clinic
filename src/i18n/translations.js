@@ -17,7 +17,6 @@ export const translations = {
     },
     hero: {
       pill: 'Holistic homoeopathic care',
-      clinicName: 'Alivio Homoeo Clinic',
       taglineLabel: 'We focus on',
       taglineSlides: ['Homoeopathy', 'Yoga', 'Mental Wellness'],
       h1: 'FEEL THE HEALING TOUCH',
@@ -257,9 +256,8 @@ export const translations = {
     },
     hero: {
       pill: 'ഹോളിസ്റ്റിക് ഹോമിയോ ചികിത്സ',
-      clinicName: 'അലിവിയോ ഹോമിയോ ക്ലിനിക്',
       taglineLabel: 'ഞങ്ങളുടെ ശ്രദ്ധ',
-      taglineSlides: ['ഹോമിയോപതി', 'യോഗം', 'മാനസിക ആരോഗ്യം'],
+      taglineSlides: ['ഹോമിയോപതി', 'യോഗ', 'മാനസിക ആരോഗ്യം'],
       h1: 'FEEL THE HEALING TOUCH',
       subtitle:
         'കരുണയോടെ നടത്തുന്ന കൗൺസലിംഗും വ്യക്തിഗത മരുന്നുകളും ശാന്തമായ പരിചരണാനുഭവവും — നിങ്ങളുടെ കുടുംബത്തിന്റെ ആരോഗ്യം മുൻനിർത്തി.',
@@ -393,7 +391,7 @@ export const translations = {
     },
     wellnessSlider: {
       eyebrow: 'ഞങ്ങളുടെ ശ്രദ്ധ മേഖലകൾ',
-      title: 'ഹോമിയോപതി, യോഗം, മാനസിക ആരോഗ്യം',
+      title: 'ഹോമിയോപതി, യോഗ, മാനസിക ആരോഗ്യം',
       subtitle:
         'വ്യക്തിഗത മരുന്നുകൾ, മനസ്സിനെ ശാന്തമാക്കുന്ന ചലനം, വൈകാരിക ആരോഗ്യം — നിങ്ങളുടെയും കുടുംബത്തിന്റെയും പിന്തുണയ്ക്കായി ഒന്നിച്ച്.',
       prevAria: 'മുമ്പത്തെ സ്ലൈഡ്',
@@ -417,7 +415,7 @@ export const translations = {
         },
         {
           id: 'yoga',
-          title: 'യോഗം',
+          title: 'യോഗ',
           subtitle:
             'നഴ്സാരമായ യോഗ അഭ്യാസം ഹോമിയോ പരിചരണത്തെ സഹായിച്ച് ശാന്തതയും ലാഘവവും ആരോഗ്യം മുഴുവൻ മെച്ചപ്പെടുത്താം.',
           bullets: [

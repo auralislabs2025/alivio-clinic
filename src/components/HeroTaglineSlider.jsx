@@ -16,17 +16,13 @@ export default function HeroTaglineSlider() {
   }, [slides.length]);
 
   return (
-    <div
-      className="mt-4 min-h-[2.75rem] sm:min-h-[3.25rem]"
-      aria-live="polite"
-      aria-atomic="true"
-    >
-      <p className="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-200/95 [text-shadow:0_1px_12px_rgba(0,0,0,0.35)]">
+    <div className="min-h-[3rem] sm:min-h-[3.25rem]" aria-live="polite" aria-atomic="true">
+      <p className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-200/95 [text-shadow:0_1px_12px_rgba(0,0,0,0.35)] sm:text-sm sm:tracking-[0.2em]">
         {t.hero.taglineLabel}
       </p>
       <p
         key={i}
-        className="mt-1 font-serif text-2xl font-bold tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.4)] motion-safe:animate-[heroTagline_0.6s_ease-out]"
+        className="mt-2 font-serif text-2xl font-bold tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.4)] motion-safe:animate-[heroTagline_0.6s_ease-out] sm:text-3xl"
         style={{ animationFillMode: 'both' }}
       >
         {slides[i]}

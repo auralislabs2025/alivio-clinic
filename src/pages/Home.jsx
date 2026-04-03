@@ -45,20 +45,17 @@ export default function HomePage() {
       >
         <div className="mx-auto flex min-h-svh max-w-7xl items-center px-6 pt-24 md:pt-28">
           <div className="max-w-2xl rounded-2xl bg-black/25 p-6 text-center shadow-lg md:rounded-none md:bg-transparent md:p-0 md:text-left md:shadow-none">
-            <div className="mb-6 flex flex-col items-center gap-4 md:flex-row md:items-end md:justify-start md:gap-6">
+            <div className="mb-8 flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-start sm:gap-6 md:mb-10">
               <img
-                src={CLINIC.logoSvg}
+                src={CLINIC.logoMark}
                 alt=""
-                width={200}
-                height={56}
-                className="h-14 w-auto shrink-0 md:h-16"
+                width={80}
+                height={80}
+                className="h-16 w-16 shrink-0 sm:h-[4.5rem] sm:w-[4.5rem]"
                 loading="eager"
                 decoding="async"
               />
-              <div className="w-full text-center md:text-left">
-                <p className="font-serif text-2xl font-bold tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.4)] sm:text-3xl">
-                  {t.hero.clinicName}
-                </p>
+              <div className="w-full min-w-0 text-center sm:flex-1 sm:text-left">
                 <HeroTaglineSlider />
               </div>
             </div>

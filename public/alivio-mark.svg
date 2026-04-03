@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none" aria-hidden="true">
+  <circle cx="40" cy="40" r="38" stroke="#1C3A94" stroke-width="2.5" fill="rgba(30,123,68,0.12)"/>
+  <path
+    d="M40 18c-6 12-10 22-10 30a10 10 0 1020 0c0-8-4-18-10-30z"
+    fill="#1E7B44"
+    opacity="0.95"
+  />
+  <path d="M40 28c4 8 6 14 6 20a6 6 0 01-12 0c0-6 2-12 6-20z" fill="#1C3A94" opacity="0.35"/>
+</svg>
