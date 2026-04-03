@@ -239,6 +239,8 @@ export const translations = {
       thanks: 'Thanks — we’ll contact you shortly.',
       rights: 'All rights reserved.',
       backToTop: 'Back to top',
+      developedBy: 'Developed by',
+      developerBrand: 'Auralis Labis',
     },
   },
   ml: {
@@ -481,6 +483,8 @@ export const translations = {
       thanks: 'നന്ദി — ഉടൻ ഞങ്ങൾ നിങ്ങളെ ബന്ധപ്പെടും.',
       rights: 'എല്ലാ അവകാശങ്ങളും സംരക്ഷിതം.',
       backToTop: 'മുകളിലേക്ക്',
+      developedBy: 'വികസിപ്പിച്ചത്',
+      developerBrand: 'Auralis Labis',
     },
   },
 };

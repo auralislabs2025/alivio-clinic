@@ -15,6 +15,7 @@ export const CLINIC = {
     ),
   instagramUrl: 'https://www.instagram.com/',
   instagramHandle: '@aliviohomoeo',
+  developerSiteUrl: 'https://aulab.in',
   /** Main logo — `public/alivio-logo.png` (circular clinic emblem). */
   logoSvg: '/alivio-logo.png',
   /** Hero banner mark (same asset; sized in `Home.jsx`). */

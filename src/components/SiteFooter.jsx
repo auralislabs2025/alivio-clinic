@@ -59,20 +59,33 @@ export default function SiteFooter() {
             </div>
           </div>
         </div>
-        <div className="mt-8 flex flex-col gap-3 border-t border-white/15 pt-8 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-white/85">
-            &copy; {new Date().getFullYear()} {CLINIC.name}. {t.footer.rights}
+        <div className="mt-8 border-t border-white/15 pt-8">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-white/85">
+              &copy; {new Date().getFullYear()} {CLINIC.name}. {t.footer.rights}
+            </p>
+            <a
+              href="#top"
+              className="font-semibold text-white hover:text-white/90"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
+              {t.footer.backToTop}
+            </a>
+          </div>
+          <p className="mt-4 text-center text-xs text-white/65 sm:text-left">
+            {t.footer.developedBy}{' '}
+            <a
+              href={CLINIC.developerSiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-white/90 underline-offset-2 hover:underline"
+            >
+              {t.footer.developerBrand}
+            </a>
           </p>
-          <a
-            href="#top"
-            className="font-semibold text-white hover:text-white/90"
-            onClick={(e) => {
-              e.preventDefault();
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          >
-            {t.footer.backToTop}
-          </a>
         </div>
       </div>
     </footer>
