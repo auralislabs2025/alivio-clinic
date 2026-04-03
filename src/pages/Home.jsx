@@ -31,10 +31,11 @@ export default function HomePage() {
         className="relative min-h-svh overflow-hidden bg-background-warm"
         aria-labelledby="alivio-hero-title"
         style={{
+          /* Calm meditation / mind–body wellness — soft tones that blend with #FAF9F6 + brand green/blue */
           backgroundImage:
-            "linear-gradient(rgba(250,249,246,0.82), rgba(250,249,246,0.82)), url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=2400&q=80')",
+            "linear-gradient(180deg, rgba(250,249,246,0.92) 0%, rgba(250,249,246,0.78) 45%, rgba(250,249,246,0.88) 100%), linear-gradient(135deg, rgba(30,123,68,0.06) 0%, transparent 50%, rgba(28,58,148,0.05) 100%), url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=2400&q=85')",
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center 35%',
         }}
       >
         <div className="mx-auto flex min-h-svh max-w-7xl items-center px-6 pt-24 md:pt-28">
