@@ -16,7 +16,7 @@ export const translations = {
       mlShort: 'ML',
     },
     hero: {
-      pill: 'Holistic homeopathic care',
+      pill: 'Holistic homoeopathic care',
       h1: 'FEEL THE HEALING TOUCH',
       subtitle:
         'Compassionate consultations, personalized remedies, and a calm healing experience — designed around you and your family’s wellbeing.',
@@ -38,7 +38,7 @@ export const translations = {
         { title: 'Skin & Allergy', desc: 'Gentle approaches for allergies, rashes, eczema, and related conditions.' },
         { title: 'Women’s Health', desc: 'Supportive care across different life stages with privacy and empathy.' },
         { title: 'Children’s Wellness', desc: 'Family-friendly consultations with calm, patient guidance.' },
-        { title: 'Digestive Health', desc: 'Address discomfort and imbalances with personalized homeopathic options.' },
+        { title: 'Digestive Health', desc: 'Address discomfort and imbalances with personalized homoeopathic options.' },
         { title: 'Stress & Sleep', desc: 'Focused support to restore calm, energy, and better rest.' },
       ],
     },
@@ -71,7 +71,7 @@ export const translations = {
     about: {
       title: 'About Alivio',
       body:
-        'Alivio Homeo Clinic offers patient-first homeopathic care with empathy, clarity, and a calm healing experience. Our focus is on understanding the whole person and supporting long-term wellbeing.',
+        'Alivio Homoeo Clinic offers patient-first homoeopathic care with empathy, clarity, and a calm healing experience. Our focus is on understanding the whole person and supporting long-term wellbeing.',
       cards: [
         { title: 'Personalized Care', desc: 'Your symptoms, routines, and history shape your plan.' },
         { title: 'Natural Approach', desc: 'Gentle, holistic methods that respect your body.' },
@@ -89,7 +89,7 @@ export const translations = {
       readMore: 'Read more',
       posts: [
         { tag: 'Wellness', title: 'Building better sleep habits', excerpt: 'Small changes that can make rest more consistent.' },
-        { tag: 'Homeopathy', title: 'What to expect in your first visit', excerpt: 'A simple overview of our consultation process.' },
+        { tag: 'Homoeopathy', title: 'What to expect in your first visit', excerpt: 'A simple overview of our consultation process.' },
       ],
     },
     contact: {
@@ -104,7 +104,7 @@ export const translations = {
       bookOnWhatsApp: 'Book on WhatsApp',
       opensNewTab: 'Opens WhatsApp in a new tab',
       defaultMessage:
-        'Hello, I would like to book an appointment at Alivio Homeo Clinic. Please let me know the available slots. Thank you.',
+        'Hello, I would like to book an appointment at Alivio Homoeo Clinic. Please let me know the available slots. Thank you.',
       bookingCardSubtitle:
         'Tap the button to open WhatsApp with a pre-filled message. Chat with us to choose a time and ask questions—you can edit the message before sending.',
       orUseForm: 'Prefer email follow-up? Use the form below.',
@@ -115,7 +115,7 @@ export const translations = {
     yoga: {
       eyebrow: 'Yoga',
       title: 'Yoga support for mind–body balance',
-      subtitle: 'A gentle yoga routine can complement homeopathic care by improving calm, flexibility, and overall wellbeing.',
+      subtitle: 'A gentle yoga routine can complement homoeopathic care by improving calm, flexibility, and overall wellbeing.',
       bullets: ['Breath-focused sessions to reduce stress', 'Gentle mobility to support daily comfort', 'Simple routines you can continue at home'],
       cta: 'Book a Session',
       secondaryCta: 'Ask a Question',

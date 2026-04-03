@@ -35,7 +35,7 @@ export default function Navbar() {
           <a
             href="/"
             className="flex items-center gap-3"
-            aria-label="Alivio Homeo Clinic"
+            aria-label="Alivio Homoeo Clinic"
             onClick={(e) => {
               if (window.location.pathname !== '/') return;
               e.preventDefault();
@@ -44,7 +44,7 @@ export default function Navbar() {
           >
             <img
               src="/alivio-logo.png"
-              alt="Alivio Homeo Clinic logo"
+              alt="Alivio Homoeo Clinic logo"
               width={52}
               height={52}
               className={`shrink-0 transition-all duration-200 ${scrolled ? 'h-10 w-10' : 'h-12 w-12'}`}
