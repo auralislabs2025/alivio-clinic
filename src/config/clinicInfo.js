@@ -15,8 +15,8 @@ export const CLINIC = {
     ),
   instagramUrl: 'https://www.instagram.com/',
   instagramHandle: '@aliviohomoeo',
-  /** Replace `public/alivio-logo.svg` with your `ALIVIO_1 (1).svg` artwork if you prefer. */
-  logoSvg: '/alivio-logo.svg',
-  /** Text-free mark for the hero banner (avoids duplicating the wordmark). */
-  logoMark: '/alivio-mark.svg',
+  /** Main logo — `public/alivio-logo.png` (circular clinic emblem). */
+  logoSvg: '/alivio-logo.png',
+  /** Hero banner mark (same asset; sized in `Home.jsx`). */
+  logoMark: '/alivio-logo.png',
 };

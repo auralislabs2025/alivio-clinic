@@ -32,10 +32,10 @@ export default function Navbar() {
           >
             <img
               src={CLINIC.logoSvg}
-              alt="Alivio Homoeo Clinic logo"
+              alt="Alivio Homoeo Clinic — FEEL THE HEALING TOUCH"
               width={52}
               height={52}
-              className={`shrink-0 transition-all duration-200 ${scrolled ? 'h-10 w-10' : 'h-12 w-12'}`}
+              className={`shrink-0 object-contain transition-all duration-200 ${scrolled ? 'h-10 w-10' : 'h-12 w-12'}`}
             />
           </a>
 

@@ -54,7 +54,7 @@ export default function HomePage() {
                 alt=""
                 width={80}
                 height={80}
-                className="h-16 w-16 shrink-0 sm:h-[4.5rem] sm:w-[4.5rem]"
+                className="h-16 w-16 shrink-0 rounded-full object-contain shadow-lg ring-2 ring-white/25 sm:h-[4.5rem] sm:w-[4.5rem]"
                 loading="eager"
                 decoding="async"
               />
