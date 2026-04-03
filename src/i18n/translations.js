@@ -86,7 +86,7 @@ export const translations = {
           title: 'Women’s Health',
           desc: 'Support across life stages with privacy and empathy.',
           image:
-            'https://images.unsplash.com/photo-1579154208041-0f6b0f1e0c8a?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
         },
         {
           icon: 'heart',
@@ -326,7 +326,7 @@ export const translations = {
           title: 'സ്ത്രീ ആരോഗ്യപരിചരണം',
           desc: 'ജീവിതഘട്ടങ്ങളിൽ സ്വകാര്യതയോടെയും കരുതലോടെയും പിന്തുണ.',
           image:
-            'https://images.unsplash.com/photo-1579154208041-0f6b0f1e0c8a?auto=format&fit=crop&w=900&q=80',
+            'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=900&q=80',
         },
         {
           icon: 'heart',
