@@ -1,6 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
-import { NavLink } from 'react-router-dom';
 import WhatsAppBookingButton from './WhatsAppBookingButton.jsx';
 import { CLINIC } from '../config/clinicInfo.js';
 
@@ -8,18 +7,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const { lang, setLang, t } = useI18n();
-
-  const links = useMemo(
-    () => [
-      { label: t.nav.home, to: '/' },
-      { label: t.nav.about, to: '/about' },
-      { label: t.nav.methodology, to: '/methodology' },
-      { label: t.nav.conditions, to: '/conditions' },
-      { label: t.nav.blog, to: '/blog' },
-      { label: t.nav.contact, to: '/contact' },
-    ],
-    [t],
-  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -52,20 +39,7 @@ export default function Navbar() {
             />
           </a>
 
-          <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
-            {links.map((l) => (
-              <NavLink
-                key={l.to}
-                to={l.to}
-                className={({ isActive }) =>
-                  `text-sm font-medium transition-colors ${
-                    isActive ? 'text-slate-950' : 'text-slate-700 hover:text-slate-950'
-                  }`
-                }
-              >
-                {l.label}
-              </NavLink>
-            ))}
+          <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
             <div className="flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 p-1">
               <button
                 type="button"
@@ -90,7 +64,7 @@ export default function Navbar() {
             </div>
             <WhatsAppBookingButton variant="nav" />
             <a
-              href="/booking"
+              href="#contact"
               className="inline-flex items-center justify-center rounded-full bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:scale-[1.02] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue"
             >
               {t.nav.book}
@@ -112,22 +86,6 @@ export default function Navbar() {
           <div className="md:hidden">
             <div className="mx-auto max-w-7xl px-6 pb-5">
               <div className="flex flex-col gap-3 pt-3">
-                {links.map((l) => (
-                  <NavLink
-                    key={l.to}
-                    to={l.to}
-                    onClick={() => {
-                      setOpen(false);
-                    }}
-                    className={({ isActive }) =>
-                      `rounded-xl px-3 py-2 text-base font-medium ${
-                        isActive ? 'bg-slate-900/5 text-slate-950' : 'text-slate-800 hover:bg-slate-900/5'
-                      }`
-                    }
-                  >
-                    {l.label}
-                  </NavLink>
-                ))}
                 <div className="flex items-center gap-2 rounded-xl border border-slate-900/10 bg-white/70 p-2">
                   <span className="text-sm font-semibold text-slate-900">{t.nav.language}</span>
                   <div className="ml-auto flex items-center gap-2">
@@ -157,7 +115,7 @@ export default function Navbar() {
                   <WhatsAppBookingButton variant="nav" />
                 </div>
                 <a
-                  href="/booking"
+                  href="#contact"
                   onClick={() => {
                     setOpen(false);
                   }}
@@ -173,4 +131,3 @@ export default function Navbar() {
     </header>
   );
 }
-

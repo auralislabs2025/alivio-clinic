@@ -18,7 +18,7 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
   return (
     <section
       id="contact"
-      className={isDark ? 'bg-primary-blue text-white' : 'bg-background-warm text-slate-950'}
+      className={`scroll-mt-24 ${isDark ? 'bg-primary-blue text-white' : 'bg-background-warm text-slate-950'}`}
       aria-labelledby={`${formId}-title`}
     >
       {prominentWhatsApp && !isDark && (

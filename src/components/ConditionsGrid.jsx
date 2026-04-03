@@ -14,7 +14,11 @@ export default function ConditionsGrid({ showHeader = true }) {
   const items = useMemo(() => t.conditions.items, [t]);
 
   return (
-    <section className="bg-background-warm" aria-labelledby={showHeader ? 'conditions-title' : undefined}>
+    <section
+      id="conditions"
+      className="scroll-mt-24 bg-background-warm"
+      aria-labelledby={showHeader ? 'conditions-title' : undefined}
+    >
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-18">
         {showHeader && (
           <div className="text-center">

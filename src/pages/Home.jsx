@@ -80,7 +80,7 @@ export default function HomePage() {
 
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center md:justify-start">
               <a
-                href="/booking"
+                href="#contact"
                 className="inline-flex w-full items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:shadow-[0_0_28px_rgba(28,58,148,0.28)] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue sm:w-auto"
                 style={{
                   backgroundImage: 'linear-gradient(90deg, #1C3A94 0%, #2E5BE0 100%)',
@@ -89,7 +89,7 @@ export default function HomePage() {
                 {t.hero.cta}
               </a>
               <a
-                href="/conditions"
+                href="#conditions"
                 className="inline-flex w-full items-center justify-center rounded-full border border-white/50 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/20 sm:w-auto"
               >
                 {t.hero.secondaryCta}

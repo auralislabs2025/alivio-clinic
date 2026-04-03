@@ -74,13 +74,13 @@ export default function WellnessSliderSection() {
                 </ul>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                   <a
-                    href="/booking"
+                    href="#contact"
                     className="inline-flex w-full items-center justify-center rounded-full bg-primary-blue px-7 py-3.5 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue sm:w-auto"
                   >
                     {t.wellnessSlider.cta}
                   </a>
                   <a
-                    href="/contact"
+                    href="#contact"
                     className="inline-flex w-full items-center justify-center rounded-full border border-slate-900/10 bg-white/75 px-7 py-3.5 text-sm font-semibold text-slate-900 hover:bg-white sm:w-auto"
                   >
                     {t.wellnessSlider.secondaryCta}
