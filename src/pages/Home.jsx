@@ -5,7 +5,7 @@ import PatientJourneyTimeline from '../components/PatientJourneyTimeline.jsx';
 import YogaSection from '../components/YogaSection.jsx';
 import ContactSection from '../components/ContactSection.jsx';
 
-/** Your shared reference banner (vial on moss, blue gradient) — `clinic/public/alivio-hero-reference.png` */
+/** Hero banner image — `clinic/public/alivio-hero-reference.png` (replace file to swap artwork). */
 const HERO_BANNER = '/alivio-hero-reference.png';
 
 function TrustBadges() {
