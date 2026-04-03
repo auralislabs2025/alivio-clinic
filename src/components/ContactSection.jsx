@@ -1,4 +1,4 @@
-import { useId, useState } from 'react';
+import { useId, useMemo, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
 import WhatsAppBookingButton from './WhatsAppBookingButton.jsx';
 import { CLINIC } from '../config/clinicInfo.js';
@@ -8,6 +8,14 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
   const { t } = useI18n();
   const formId = useId();
   const [status, setStatus] = useState({ type: 'idle', message: '' });
+
+  const minVisitDate = useMemo(() => {
+    const d = new Date();
+    const y = d.getFullYear();
+    const m = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    return `${y}-${m}-${day}`;
+  }, []);
 
   const isDark = variant === 'dark';
 
@@ -165,6 +173,61 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
                   placeholder={t.contactForm.phonePlaceholder}
                 />
               </div>
+              <div className="sm:col-span-2">
+                <label htmlFor={`${formId}-visit-date`} className={isDark ? 'block text-sm font-semibold text-white' : 'block text-sm font-semibold text-slate-950'}>
+                  {t.contactForm.visitDate}
+                </label>
+                <input
+                  id={`${formId}-visit-date`}
+                  name="visitDate"
+                  type="date"
+                  min={minVisitDate}
+                  required
+                  className={
+                    isDark
+                      ? 'mt-2 w-full max-w-xs rounded-xl border border-white/15 bg-white/10 px-3.5 py-2.5 text-white outline-none focus:border-white/35 focus:ring-2 focus:ring-white/25 [color-scheme:dark]'
+                      : 'mt-2 w-full max-w-xs rounded-xl border border-slate-900/10 bg-white px-3.5 py-2.5 text-slate-950 outline-none focus:border-primary-blue/30 focus:ring-2 focus:ring-primary-blue/20'
+                  }
+                />
+              </div>
+              <fieldset className="m-0 min-w-0 border-0 p-0 sm:col-span-2">
+                <legend className={isDark ? 'text-sm font-semibold text-white' : 'text-sm font-semibold text-slate-950'}>
+                  {t.contactForm.preferredTime}
+                </legend>
+                <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
+                  <label
+                    className={`flex cursor-pointer items-center gap-2.5 text-sm ${isDark ? 'text-white/90' : 'text-slate-800'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="visitSlot"
+                      value="morning"
+                      required
+                      className={
+                        isDark
+                          ? 'h-4 w-4 shrink-0 border-white/40 bg-white/10 text-emerald-400 focus:ring-emerald-400/40'
+                          : 'h-4 w-4 shrink-0 border-slate-300 text-primary-blue focus:ring-primary-blue/30'
+                      }
+                    />
+                    <span>{t.contactForm.slotMorning}</span>
+                  </label>
+                  <label
+                    className={`flex cursor-pointer items-center gap-2.5 text-sm ${isDark ? 'text-white/90' : 'text-slate-800'}`}
+                  >
+                    <input
+                      type="radio"
+                      name="visitSlot"
+                      value="afternoon"
+                      className={
+                        isDark
+                          ? 'h-4 w-4 shrink-0 border-white/40 bg-white/10 text-emerald-400 focus:ring-emerald-400/40'
+                          : 'h-4 w-4 shrink-0 border-slate-300 text-primary-blue focus:ring-primary-blue/30'
+                      }
+                    />
+                    <span>{t.contactForm.slotAfternoon}</span>
+                  </label>
+                </div>
+              </fieldset>
             </div>
 
             <div>
