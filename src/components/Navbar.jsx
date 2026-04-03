@@ -19,10 +19,10 @@ export default function Navbar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50">
       <div className={`backdrop-blur border-b border-slate-900/10 transition-all duration-200 ${headerClass}`}>
-        <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-6">
+        <div className="mx-auto flex h-full max-w-7xl items-center justify-between gap-3 px-6">
           <a
             href="/"
-            className="flex items-center gap-3"
+            className="flex min-w-0 items-center gap-3"
             aria-label="Alivio Homoeo Clinic"
             onClick={(e) => {
               if (window.location.pathname !== '/') return;
@@ -38,6 +38,45 @@ export default function Navbar() {
               className={`shrink-0 transition-all duration-200 ${scrolled ? 'h-10 w-10' : 'h-12 w-12'}`}
             />
           </a>
+
+          <div className="flex shrink-0 items-center gap-2 md:hidden">
+            <div
+              className="flex items-center gap-1 rounded-full border border-slate-900/15 bg-white/90 p-0.5 shadow-sm backdrop-blur-sm"
+              role="group"
+              aria-label={t.nav.language}
+            >
+              <button
+                type="button"
+                className={`rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors ${
+                  lang === 'en' ? 'bg-slate-900 text-white' : 'text-slate-700 hover:bg-slate-900/5'
+                }`}
+                onClick={() => setLang('en')}
+                aria-pressed={lang === 'en'}
+              >
+                {t.nav.enShort}
+              </button>
+              <button
+                type="button"
+                className={`rounded-full px-2.5 py-1.5 text-xs font-semibold transition-colors ${
+                  lang === 'ml' ? 'bg-slate-900 text-white' : 'text-slate-700 hover:bg-slate-900/5'
+                }`}
+                onClick={() => setLang('ml')}
+                aria-pressed={lang === 'ml'}
+              >
+                {t.nav.mlShort}
+              </button>
+            </div>
+
+            <button
+              type="button"
+              className="inline-flex items-center justify-center rounded-xl border border-slate-900/10 bg-white/85 px-3 py-2 text-sm font-semibold text-slate-900 shadow-sm backdrop-blur-sm"
+              aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
+              aria-expanded={open}
+              onClick={() => setOpen((v) => !v)}
+            >
+              {t.nav.menu}
+            </button>
+          </div>
 
           <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
             <div className="flex items-center gap-2 rounded-full border border-slate-900/10 bg-white/70 p-1">
@@ -70,47 +109,12 @@ export default function Navbar() {
               {t.nav.book}
             </a>
           </nav>
-
-          <button
-            type="button"
-            className="inline-flex items-center justify-center rounded-xl border border-slate-900/10 bg-white/70 px-3 py-2 text-sm font-semibold text-slate-900 md:hidden"
-            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
-            aria-expanded={open}
-            onClick={() => setOpen((v) => !v)}
-          >
-            {t.nav.menu}
-          </button>
         </div>
 
         {open && (
-          <div className="md:hidden">
+          <div className="border-t border-slate-900/15 bg-[#f7f5f0]/97 shadow-[0_12px_32px_rgba(15,23,42,0.12)] backdrop-blur-md md:hidden">
             <div className="mx-auto max-w-7xl px-6 pb-5">
-              <div className="flex flex-col gap-3 pt-3">
-                <div className="flex items-center gap-2 rounded-xl border border-slate-900/10 bg-white/70 p-2">
-                  <span className="text-sm font-semibold text-slate-900">{t.nav.language}</span>
-                  <div className="ml-auto flex items-center gap-2">
-                    <button
-                      type="button"
-                      className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
-                        lang === 'en' ? 'bg-slate-900 text-white' : 'text-slate-800 hover:bg-slate-900/5'
-                      }`}
-                      onClick={() => setLang('en')}
-                      aria-pressed={lang === 'en'}
-                    >
-                      {t.nav.enShort}
-                    </button>
-                    <button
-                      type="button"
-                      className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
-                        lang === 'ml' ? 'bg-slate-900 text-white' : 'text-slate-800 hover:bg-slate-900/5'
-                      }`}
-                      onClick={() => setLang('ml')}
-                      aria-pressed={lang === 'ml'}
-                    >
-                      {t.nav.mlShort}
-                    </button>
-                  </div>
-                </div>
+              <div className="flex flex-col gap-3 pt-4">
                 <div className="flex items-center gap-3">
                   <WhatsAppBookingButton variant="nav" />
                 </div>
@@ -119,7 +123,7 @@ export default function Navbar() {
                   onClick={() => {
                     setOpen(false);
                   }}
-                  className="mt-1 inline-flex items-center justify-center rounded-full bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-sm"
+                  className="inline-flex items-center justify-center rounded-full bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-sm"
                 >
                   {t.nav.book}
                 </a>
