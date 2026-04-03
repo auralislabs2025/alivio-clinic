@@ -209,6 +209,7 @@ export const translations = {
       hoursLabel: 'Clinic hours:',
       hoursValue: 'Mon–Sat, 9:00 AM – 6:00 PM',
       phoneLabel: 'Phone:',
+      addressLabel: 'Address:',
       name: 'Name',
       phone: 'Phone',
       message: 'Message',
@@ -223,6 +224,7 @@ export const translations = {
       subtitle:
         'Share your details and the ailment you’d like help with. We’ll reach out to confirm a suitable time.',
       locationLabel: 'Location',
+      openInMaps: 'Open in Google Maps',
       instagramLabel: 'Instagram',
       hoursLabel: 'Clinic hours:',
       hoursValue: 'Mon–Sat, 9:00 AM – 6:00 PM',
@@ -449,6 +451,7 @@ export const translations = {
       hoursLabel: 'ക്ലിനിക് സമയം:',
       hoursValue: 'തിങ്കൾ–ശനി, രാവിലെ 9:00 – വൈകിട്ട് 6:00',
       phoneLabel: 'ഫോൺ:',
+      addressLabel: 'വിലാസം:',
       name: 'പേര്',
       phone: 'ഫോൺ',
       message: 'സന്ദേശം',
@@ -463,6 +466,7 @@ export const translations = {
       subtitle:
         'നിങ്ങളുടെ വിവരങ്ങളും നിങ്ങൾക്ക് സഹായം വേണ്ട അസുഖവും പങ്കിടുക. അനുയോജ്യമായ സമയം സ്ഥിരീകരിക്കാൻ ഞങ്ങൾ ബന്ധപ്പെടും.',
       locationLabel: 'സ്ഥാനം',
+      openInMaps: 'Google മാപ്പിൽ തുറക്കുക',
       instagramLabel: 'ഇൻസ്റ്റാഗ്രാം',
       hoursLabel: 'ക്ലിനിക് സമയം:',
       hoursValue: 'തിങ്കൾ–ശനി, രാവിലെ 9:00 – വൈകിട്ട് 6:00',

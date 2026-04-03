@@ -4,7 +4,11 @@ export const CLINIC = {
   /** Shown in UI and tel: link (E.164-style, no spaces). */
   phoneTel: '+919876543210',
   phoneDisplay: '+91 98765 43210',
-  address: 'Your clinic address — City, State — PIN',
+  address: 'Opp Govt HSS, Njekkad, Kerala 695143, India',
+  /** Opens Google Maps at the clinic location (search pin). */
+  mapsUrl:
+    'https://www.google.com/maps/search/?api=1&query=' +
+    encodeURIComponent('Opp Govt HSS, Njekkad, Kerala 695143, India'),
   instagramUrl: 'https://www.instagram.com/',
   instagramHandle: '@aliviohomoeo',
   /** Replace `public/alivio-logo.svg` with your `ALIVIO_1 (1).svg` artwork if you prefer. */

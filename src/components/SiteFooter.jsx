@@ -19,14 +19,28 @@ export default function SiteFooter() {
               </a>
             </div>
           </div>
-          <div className="flex gap-3 sm:col-span-2">
-            <span className="mt-0.5 shrink-0 text-white/75" aria-hidden="true">
-              <MapPinIcon className="h-5 w-5" />
-            </span>
-            <div className="min-w-0">
-              <p className="text-xs font-semibold uppercase tracking-wider text-white/60">{t.footer.locationLabel}</p>
-              <p className="mt-1 max-w-lg leading-relaxed">{CLINIC.address}</p>
-            </div>
+          <div className="sm:col-span-2">
+            <a
+              href={CLINIC.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex gap-3 rounded-xl p-1 -m-1 outline-offset-4 transition-colors hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
+              aria-label={`${t.footer.openInMaps}: ${CLINIC.address}`}
+            >
+              <span
+                className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500/25 text-white ring-2 ring-emerald-300/50 shadow-[0_4px_14px_rgba(0,0,0,0.2)]"
+                aria-hidden="true"
+              >
+                <MapPinIcon className="h-6 w-6" />
+              </span>
+              <div className="min-w-0 pt-0.5">
+                <p className="text-xs font-semibold uppercase tracking-wider text-white/60">{t.footer.locationLabel}</p>
+                <p className="mt-1 max-w-lg leading-relaxed text-white group-hover:underline group-hover:underline-offset-2">
+                  {CLINIC.address}
+                </p>
+                <p className="mt-1.5 text-xs font-medium text-emerald-200/95">{t.footer.openInMaps}</p>
+              </div>
+            </a>
           </div>
           <div className="flex gap-3">
             <span className="mt-0.5 shrink-0 text-white/75" aria-hidden="true">

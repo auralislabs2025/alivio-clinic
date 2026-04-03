@@ -1,6 +1,8 @@
 import { useId, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
 import WhatsAppBookingButton from './WhatsAppBookingButton.jsx';
+import { CLINIC } from '../config/clinicInfo.js';
+import { MapPinIcon } from './icons.jsx';
 
 export default function ContactSection({ variant = 'light', prominentWhatsApp = false }) {
   const { t } = useI18n();
@@ -87,7 +89,38 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
               <span className={isDark ? 'font-semibold text-white' : 'font-semibold text-slate-950'}>
                 {t.contactForm.phoneLabel}
               </span>{' '}
-              +91 XXXXX XXXXX
+              <a href={`tel:${CLINIC.phoneTel}`} className={isDark ? 'text-white underline-offset-2 hover:underline' : 'text-primary-blue hover:underline'}>
+                {CLINIC.phoneDisplay}
+              </a>
+            </div>
+            <div className="flex gap-3">
+              <a
+                href={CLINIC.mapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-full ring-2 ${
+                  isDark ? 'bg-white/10 text-emerald-200 ring-white/20' : 'bg-primary-green/10 text-primary-green ring-primary-green/25'
+                }`}
+                aria-label={`${t.footer.openInMaps}: ${CLINIC.address}`}
+              >
+                <MapPinIcon className="h-5 w-5" aria-hidden="true" />
+              </a>
+              <div className="min-w-0">
+                <p className={isDark ? 'font-semibold text-white' : 'font-semibold text-slate-950'}>{t.contactForm.addressLabel}</p>
+                <p className={isDark ? 'mt-1 text-white/90' : 'mt-1 text-slate-700'}>{CLINIC.address}</p>
+                <p className="mt-1.5">
+                  <a
+                    href={CLINIC.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`text-sm font-semibold underline-offset-2 hover:underline ${
+                      isDark ? 'text-emerald-200' : 'text-primary-blue'
+                    }`}
+                  >
+                    {t.footer.openInMaps}
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
