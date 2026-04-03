@@ -2,13 +2,17 @@
 export const CLINIC = {
   name: 'Alivio Homoeo Clinic',
   /** Shown in UI and tel: link (E.164-style, no spaces). */
-  phoneTel: '+919876543210',
-  phoneDisplay: '+91 98765 43210',
-  address: 'Opp Govt HSS, Njekkad, Kerala 695143, India',
-  /** Opens Google Maps at the clinic location (search pin). */
+  phoneTel: '+917012377466',
+  phoneDisplay: '+91 70123 77466',
+  /** Multi-line display (footer & contact). */
+  address:
+    'Alivio Homoeo Clinic\nOpp. Govt Higher Secondary School, Njekkad, Varkala\nPin: 695143',
+  /** Opens Google Maps at the clinic location. */
   mapsUrl:
     'https://www.google.com/maps/search/?api=1&query=' +
-    encodeURIComponent('Opp Govt HSS, Njekkad, Kerala 695143, India'),
+    encodeURIComponent(
+      'Alivio Homoeo Clinic, Opp. Govt Higher Secondary School, Njekkad, Varkala, Kerala 695143, India',
+    ),
   instagramUrl: 'https://www.instagram.com/',
   instagramHandle: '@aliviohomoeo',
   /** Replace `public/alivio-logo.svg` with your `ALIVIO_1 (1).svg` artwork if you prefer. */

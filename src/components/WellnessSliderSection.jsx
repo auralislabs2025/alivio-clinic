@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
-import { CLINIC } from '../config/clinicInfo.js';
 import { LeafIcon } from './icons.jsx';
 
 const AUTO_MS = 6500;
@@ -37,16 +36,7 @@ export default function WellnessSliderSection() {
     <section aria-labelledby="wellness-slider-title" className="bg-background-warm">
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-18">
         <div className="flex flex-col items-center text-center">
-          <img
-            src={CLINIC.logoSvg}
-            alt=""
-            width={200}
-            height={56}
-            className="h-12 w-auto md:h-14"
-            loading="lazy"
-            decoding="async"
-          />
-          <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-primary-green">{t.wellnessSlider.eyebrow}</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-primary-green">{t.wellnessSlider.eyebrow}</p>
           <h2 id="wellness-slider-title" className="mt-3 max-w-2xl font-serif text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl">
             {t.wellnessSlider.title}
           </h2>

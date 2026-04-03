@@ -1,12 +1,16 @@
 /**
  * WhatsApp Click-to-Chat: https://faq.whatsapp.com/5913398998672934
- * Set VITE_WHATSAPP_NUMBER in .env (digits only, country code without +), e.g. 919876543210
+ * Uses `CLINIC.phoneTel` by default. Override with VITE_WHATSAPP_NUMBER in .env (digits only, no +).
  */
-const FALLBACK_DIGITS = '919999999999';
+import { CLINIC } from './clinicInfo.js';
 
 export function getWhatsAppDigits() {
-  const raw = import.meta.env?.VITE_WHATSAPP_NUMBER ?? FALLBACK_DIGITS;
-  return String(raw).replace(/\D/g, '') || FALLBACK_DIGITS;
+  const fromEnv = import.meta.env?.VITE_WHATSAPP_NUMBER;
+  if (fromEnv != null && String(fromEnv).trim() !== '') {
+    const digits = String(fromEnv).replace(/\D/g, '');
+    if (digits.length >= 10) return digits;
+  }
+  return CLINIC.phoneTel.replace(/\D/g, '');
 }
 
 /**

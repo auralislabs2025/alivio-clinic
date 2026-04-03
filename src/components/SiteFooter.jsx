@@ -25,7 +25,7 @@ export default function SiteFooter() {
               target="_blank"
               rel="noopener noreferrer"
               className="group flex gap-3 rounded-xl p-1 -m-1 outline-offset-4 transition-colors hover:bg-white/5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white/40"
-              aria-label={`${t.footer.openInMaps}: ${CLINIC.address}`}
+              aria-label={`${t.footer.openInMaps}: ${CLINIC.name}, Opp. Govt Higher Secondary School, Njekkad, Varkala, Pin 695143`}
             >
               <span
                 className="mt-0.5 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-emerald-500/25 text-white ring-2 ring-emerald-300/50 shadow-[0_4px_14px_rgba(0,0,0,0.2)]"
@@ -35,7 +35,7 @@ export default function SiteFooter() {
               </span>
               <div className="min-w-0 pt-0.5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-white/60">{t.footer.locationLabel}</p>
-                <p className="mt-1 max-w-lg leading-relaxed text-white group-hover:underline group-hover:underline-offset-2">
+                <p className="mt-1 max-w-lg whitespace-pre-line leading-relaxed text-white group-hover:underline group-hover:underline-offset-2">
                   {CLINIC.address}
                 </p>
                 <p className="mt-1.5 text-xs font-medium text-emerald-200/95">{t.footer.openInMaps}</p>
