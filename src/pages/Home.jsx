@@ -1,12 +1,12 @@
 import { useI18n } from '../i18n/I18nProvider.jsx';
 import { BadgeIcon } from '../components/icons.jsx';
-
-/** Reference-style banners (vial + moss + blue gradient). Swap to variation-b for the alternate look. */
-const HERO_BANNER = '/alivio-hero-banner-variation-a.png';
 import ConditionsGrid from '../components/ConditionsGrid.jsx';
 import PatientJourneyTimeline from '../components/PatientJourneyTimeline.jsx';
 import YogaSection from '../components/YogaSection.jsx';
 import ContactSection from '../components/ContactSection.jsx';
+
+/** Your shared reference banner (vial on moss, blue gradient) — `clinic/public/alivio-hero-reference.png` */
+const HERO_BANNER = '/alivio-hero-reference.png';
 
 function TrustBadges() {
   const { t } = useI18n();
