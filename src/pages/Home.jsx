@@ -15,7 +15,7 @@ function TrustBadges() {
       {t.hero.trustBadges.map((b) => (
         <li
           key={b}
-          className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/15 px-3 py-1.5 text-sm font-semibold text-white backdrop-blur-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-white/35 bg-black/20 px-3 py-1.5 text-sm font-semibold text-white"
         >
           <BadgeIcon className="h-4 w-4 text-emerald-300" />
           <span>{b}</span>
@@ -34,15 +34,16 @@ export default function HomePage() {
         className="relative min-h-svh overflow-hidden bg-background-warm"
         aria-labelledby="alivio-hero-title"
         style={{
-          /* Custom Alivio banner: vial on moss, shallow DOF, left negative space (reference-inspired). */
-          backgroundImage: `linear-gradient(90deg, rgba(15,23,42,0.5) 0%, rgba(15,23,42,0.22) 38%, rgba(250,249,246,0.12) 55%, transparent 72%), linear-gradient(180deg, rgba(250,249,246,0.25) 0%, transparent 40%, rgba(250,249,246,0.2) 100%), url('${HERO_BANNER}')`,
+          /* Original shared image only — no gradient overlays (avoids muddy/noisy look over the photo). */
+          backgroundImage: `url('${HERO_BANNER}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'right center',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         <div className="mx-auto flex min-h-svh max-w-7xl items-center px-6 pt-24 md:pt-28">
-          <div className="max-w-2xl rounded-2xl bg-slate-900/35 p-6 text-center shadow-lg backdrop-blur-md md:rounded-none md:bg-transparent md:p-0 md:text-left md:shadow-none md:backdrop-blur-none">
-            <p className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white/95 backdrop-blur-sm">
+          <div className="max-w-2xl rounded-2xl bg-black/25 p-6 text-center shadow-lg md:rounded-none md:bg-transparent md:p-0 md:text-left md:shadow-none">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white">
               {t.hero.pill}
             </p>
 
@@ -69,7 +70,7 @@ export default function HomePage() {
               </a>
               <a
                 href="/conditions"
-                className="inline-flex w-full items-center justify-center rounded-full border border-white/40 bg-white/15 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/25 sm:w-auto"
+                className="inline-flex w-full items-center justify-center rounded-full border border-white/50 bg-white/10 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/20 sm:w-auto"
               >
                 {t.hero.secondaryCta}
               </a>
