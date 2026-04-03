@@ -17,6 +17,9 @@ export const translations = {
     },
     hero: {
       pill: 'Holistic homoeopathic care',
+      clinicName: 'Alivio Homoeo Clinic',
+      taglineLabel: 'We focus on',
+      taglineSlides: ['Homoeopathy', 'Yoga', 'Mental Wellness'],
       h1: 'FEEL THE HEALING TOUCH',
       subtitle:
         'Compassionate consultations, personalized remedies, and a calm healing experience — designed around you and your family’s wellbeing.',
@@ -50,12 +53,48 @@ export const translations = {
       pageBody:
         'Below are some of the common conditions we support. If you don’t see yours listed, contact us — we’re happy to guide you.',
       items: [
-        { icon: 'leaf', title: 'Allergy & Sinus', desc: 'Support for seasonal allergies, sinus discomfort, and sensitivity.' },
-        { icon: 'drop', title: 'Skin Concerns', desc: 'Gentle care for eczema, acne, rashes, and itching.' },
-        { icon: 'heart', title: 'Stress & Sleep', desc: 'Restore calm and improve sleep patterns with supportive care.' },
-        { icon: 'leaf', title: 'Digestive Health', desc: 'Help for acidity, bloating, and irregular digestion.' },
-        { icon: 'drop', title: 'Women’s Health', desc: 'Support across life stages with privacy and empathy.' },
-        { icon: 'heart', title: 'Children’s Wellness', desc: 'Family-friendly consultations and ongoing guidance.' },
+        {
+          icon: 'leaf',
+          title: 'Allergy & Sinus',
+          desc: 'Support for seasonal allergies, sinus discomfort, and sensitivity.',
+          image:
+            'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'drop',
+          title: 'Skin Concerns',
+          desc: 'Gentle care for eczema, acne, rashes, and itching.',
+          image:
+            'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'heart',
+          title: 'Stress & Sleep',
+          desc: 'Restore calm and improve sleep patterns with supportive care.',
+          image:
+            'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'leaf',
+          title: 'Digestive Health',
+          desc: 'Help for acidity, bloating, and irregular digestion.',
+          image:
+            'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'drop',
+          title: 'Women’s Health',
+          desc: 'Support across life stages with privacy and empathy.',
+          image:
+            'https://images.unsplash.com/photo-1579154208041-0f6b0f1e0c8a?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'heart',
+          title: 'Children’s Wellness',
+          desc: 'Family-friendly consultations and ongoing guidance.',
+          image:
+            'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80',
+        },
       ],
     },
     journey: {
@@ -112,14 +151,57 @@ export const translations = {
       contactBannerTitle: 'WhatsApp — fastest way to reach us',
       contactBannerSubtitle: 'Book appointments, ask questions, or get clinic info. Opens WhatsApp on your phone.',
     },
-    yoga: {
-      eyebrow: 'Yoga',
-      title: 'Yoga support for mind–body balance',
-      subtitle: 'A gentle yoga routine can complement homoeopathic care by improving calm, flexibility, and overall wellbeing.',
-      bullets: ['Breath-focused sessions to reduce stress', 'Gentle mobility to support daily comfort', 'Simple routines you can continue at home'],
+    wellnessSlider: {
+      eyebrow: 'Our focus areas',
+      title: 'Homoeopathy, yoga & mental wellness',
+      subtitle:
+        'Three pillars of care — individualized remedies, mindful movement, and emotional wellbeing — working together for you and your family.',
+      prevAria: 'Previous slide',
+      nextAria: 'Next slide',
+      goToSlide: 'Go to slide',
       cta: 'Book a Session',
       secondaryCta: 'Ask a Question',
-      imageAlt: 'Yoga practice in a calm setting',
+      slides: [
+        {
+          id: 'homoeo',
+          title: 'Homoeopathy',
+          subtitle:
+            'Consultations that consider your full picture — symptoms, history, and daily life — so your remedy plan truly fits you.',
+          bullets: [
+            'Personalized remedies for acute and chronic concerns',
+            'Gentle support aligned with your body’s natural healing',
+            'Clear follow-ups and adjustments as you improve',
+          ],
+          image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1400&q=80',
+          imageAlt: 'Homoeopathic remedies and consultation setting',
+        },
+        {
+          id: 'yoga',
+          title: 'Yoga',
+          subtitle:
+            'A gentle yoga routine can complement homoeopathic care by improving calm, flexibility, and overall wellbeing.',
+          bullets: [
+            'Breath-focused sessions to reduce stress',
+            'Gentle mobility to support daily comfort',
+            'Simple routines you can continue at home',
+          ],
+          image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80',
+          imageAlt: 'Yoga practice in a calm setting',
+        },
+        {
+          id: 'mental',
+          title: 'Mental wellness',
+          subtitle:
+            'Support for stress, anxiety, sleep, and mood — a compassionate space to talk through concerns and plan next steps.',
+          bullets: [
+            'Mind–body approaches that align with your care plan',
+            'Attention to sleep, stress, and daily rhythms',
+            'Practical support you can build on between visits',
+          ],
+          image: 'https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=1400&q=80',
+          imageAlt: 'Calm space for mental wellness and relaxation',
+        },
+      ],
     },
     contactForm: {
       title: 'Contact Us',
@@ -140,6 +222,8 @@ export const translations = {
       title: 'Book an Appointment',
       subtitle:
         'Share your details and the ailment you’d like help with. We’ll reach out to confirm a suitable time.',
+      locationLabel: 'Location',
+      instagramLabel: 'Instagram',
       hoursLabel: 'Clinic hours:',
       hoursValue: 'Mon–Sat, 9:00 AM – 6:00 PM',
       phoneLabel: 'Phone:',
@@ -173,6 +257,9 @@ export const translations = {
     },
     hero: {
       pill: 'ഹോളിസ്റ്റിക് ഹോമിയോ ചികിത്സ',
+      clinicName: 'അലിവിയോ ഹോമിയോ ക്ലിനിക്',
+      taglineLabel: 'ഞങ്ങളുടെ ശ്രദ്ധ',
+      taglineSlides: ['ഹോമിയോപതി', 'യോഗം', 'മാനസിക ആരോഗ്യം'],
       h1: 'FEEL THE HEALING TOUCH',
       subtitle:
         'കരുണയോടെ നടത്തുന്ന കൗൺസലിംഗും വ്യക്തിഗത മരുന്നുകളും ശാന്തമായ പരിചരണാനുഭവവും — നിങ്ങളുടെ കുടുംബത്തിന്റെ ആരോഗ്യം മുൻനിർത്തി.',
@@ -206,12 +293,48 @@ export const translations = {
       pageBody:
         'താഴെ സാധാരണയായി ഞങ്ങൾ സഹായിക്കുന്ന ചില പ്രശ്നങ്ങളാണ്. നിങ്ങളുടെ പ്രശ്നം പട്ടികയിൽ ഇല്ലെങ്കിൽ ബന്ധപ്പെടുക — സഹായിക്കാൻ ഞങ്ങൾ തയ്യാറാണ്.',
       items: [
-        { icon: 'leaf', title: 'അലർജി & സൈനസ്', desc: 'സീസണൽ അലർജി, സൈനസ് അസൗകര്യം എന്നിവയ്ക്ക് പിന്തുണ.' },
-        { icon: 'drop', title: 'ചർമ്മ പ്രശ്നങ്ങൾ', desc: 'എക്സിമ, ആക്‌നെ, റാഷ്, ചൊറിച്ചിൽ എന്നിവയ്ക്ക് പരിചരണം.' },
-        { icon: 'heart', title: 'സമ്മർദം & ഉറക്കം', desc: 'ശാന്തത വീണ്ടെടുക്കാനും ഉറക്കം മെച്ചപ്പെടുത്താനും പിന്തുണ.' },
-        { icon: 'leaf', title: 'ജീർണാരോഗ്യം', desc: 'അസിഡിറ്റി, ബ്ലോട്ടിംഗ്, ജീർണ അസന്തുലിതം എന്നിവയ്ക്ക് സഹായം.' },
-        { icon: 'drop', title: 'സ്ത്രീ ആരോഗ്യപരിചരണം', desc: 'ജീവിതഘട്ടങ്ങളിൽ സ്വകാര്യതയോടെയും കരുതലോടെയും പിന്തുണ.' },
-        { icon: 'heart', title: 'കുട്ടികളുടെ ആരോഗ്യസംരക്ഷണം', desc: 'കുടുംബ സൗഹൃദ കൗൺസലിംഗ്, പിന്തുടർച്ച.' },
+        {
+          icon: 'leaf',
+          title: 'അലർജി & സൈനസ്',
+          desc: 'സീസണൽ അലർജി, സൈനസ് അസൗകര്യം എന്നിവയ്ക്ക് പിന്തുണ.',
+          image:
+            'https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'drop',
+          title: 'ചർമ്മ പ്രശ്നങ്ങൾ',
+          desc: 'എക്സിമ, ആക്‌നെ, റാഷ്, ചൊറിച്ചിൽ എന്നിവയ്ക്ക് പരിചരണം.',
+          image:
+            'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'heart',
+          title: 'സമ്മർദം & ഉറക്കം',
+          desc: 'ശാന്തത വീണ്ടെടുക്കാനും ഉറക്കം മെച്ചപ്പെടുത്താനും പിന്തുണ.',
+          image:
+            'https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'leaf',
+          title: 'ജീർണാരോഗ്യം',
+          desc: 'അസിഡിറ്റി, ബ്ലോട്ടിംഗ്, ജീർണ അസന്തുലിതം എന്നിവയ്ക്ക് സഹായം.',
+          image:
+            'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'drop',
+          title: 'സ്ത്രീ ആരോഗ്യപരിചരണം',
+          desc: 'ജീവിതഘട്ടങ്ങളിൽ സ്വകാര്യതയോടെയും കരുതലോടെയും പിന്തുണ.',
+          image:
+            'https://images.unsplash.com/photo-1579154208041-0f6b0f1e0c8a?auto=format&fit=crop&w=900&q=80',
+        },
+        {
+          icon: 'heart',
+          title: 'കുട്ടികളുടെ ആരോഗ്യസംരക്ഷണം',
+          desc: 'കുടുംബ സൗഹൃദ കൗൺസലിംഗ്, പിന്തുടർച്ച.',
+          image:
+            'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80',
+        },
       ],
     },
     journey: {
@@ -268,14 +391,57 @@ export const translations = {
       contactBannerTitle: 'WhatsApp — ഞങ്ങളെ എളുപ്പത്തിൽ കണ്ടെത്തുക',
       contactBannerSubtitle: 'അപ്പോയിന്റ്മെന്റ്, ചോദ്യങ്ങൾ, ക്ലിനിക് വിവരങ്ങൾ. ഫോണിൽ WhatsApp തുറക്കും.',
     },
-    yoga: {
-      eyebrow: 'യോഗ',
-      title: 'മനസും ശരീരവും സന്തുലിതമാക്കാൻ യോഗ പിന്തുണ',
-      subtitle: 'നഴ്സാരമായ യോഗ അഭ്യാസം ഹോമിയോ പരിചരണത്തെ സഹായിച്ച് ശാന്തതയും ലാഘവവും ആരോഗ്യം മുഴുവൻ മെച്ചപ്പെടുത്താം.',
-      bullets: ['സമ്മർദം കുറയ്ക്കാൻ ശ്വാസാഭ്യാസം കേന്ദ്രീകരിച്ച സെഷനുകൾ', 'ദൈനംദിന ആശ്വാസത്തിന് നഴ്സാരമായ മൊബിലിറ്റി', 'വീട്ടിലും തുടരാൻ ലളിതമായ റൂട്ടീനുകൾ'],
+    wellnessSlider: {
+      eyebrow: 'ഞങ്ങളുടെ ശ്രദ്ധ മേഖലകൾ',
+      title: 'ഹോമിയോപതി, യോഗം, മാനസിക ആരോഗ്യം',
+      subtitle:
+        'വ്യക്തിഗത മരുന്നുകൾ, മനസ്സിനെ ശാന്തമാക്കുന്ന ചലനം, വൈകാരിക ആരോഗ്യം — നിങ്ങളുടെയും കുടുംബത്തിന്റെയും പിന്തുണയ്ക്കായി ഒന്നിച്ച്.',
+      prevAria: 'മുമ്പത്തെ സ്ലൈഡ്',
+      nextAria: 'അടുത്ത സ്ലൈഡ്',
+      goToSlide: 'സ്ലൈഡിലേക്ക് പോകുക',
       cta: 'ഒരു സെഷൻ ബുക്ക് ചെയ്യുക',
       secondaryCta: 'ഒരു ചോദ്യം ചോദിക്കുക',
-      imageAlt: 'ശാന്തമായ അന്തരീക്ഷത്തിൽ യോഗ അഭ്യാസം',
+      slides: [
+        {
+          id: 'homoeo',
+          title: 'ഹോമിയോപതി',
+          subtitle:
+            'ലക്ഷണങ്ങൾ, ചരിത്രം, ദൈനംദിന ജീവിതം എന്നിവ പരിഗണിച്ച് നിങ്ങൾക്ക് അനുയോജ്യമായ ചികിത്സാ പദ്ധതി.',
+          bullets: [
+            'തീവ്രവും ദീർഘകാല പ്രശ്നങ്ങൾക്കും വ്യക്തിഗത മരുന്നുകൾ',
+            'ശരീരത്തിന്റെ സ്വാഭാവിക ആരോഗ്യത്തെ മാനിക്കുന്ന നഴ്സാരമായ പിന്തുണ',
+            'മെച്ചപ്പെടുമ്പോൾ ഫോളോ-അപ്പുകളും ക്രമീകരണങ്ങളും',
+          ],
+          image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1400&q=80',
+          imageAlt: 'ഹോമിയോപതി കൺസൾട്ടേഷനും മരുന്നുകളും',
+        },
+        {
+          id: 'yoga',
+          title: 'യോഗം',
+          subtitle:
+            'നഴ്സാരമായ യോഗ അഭ്യാസം ഹോമിയോ പരിചരണത്തെ സഹായിച്ച് ശാന്തതയും ലാഘവവും ആരോഗ്യം മുഴുവൻ മെച്ചപ്പെടുത്താം.',
+          bullets: [
+            'സമ്മർദം കുറയ്ക്കാൻ ശ്വാസാഭ്യാസം കേന്ദ്രീകരിച്ച സെഷനുകൾ',
+            'ദൈനംദിന ആശ്വാസത്തിന് നഴ്സാരമായ മൊബിലിറ്റി',
+            'വീട്ടിലും തുടരാൻ ലളിതമായ റൂട്ടീനുകൾ',
+          ],
+          image: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1400&q=80',
+          imageAlt: 'ശാന്തമായ അന്തരീക്ഷത്തിൽ യോഗ അഭ്യാസം',
+        },
+        {
+          id: 'mental',
+          title: 'മാനസിക ആരോഗ്യം',
+          subtitle:
+            'സമ്മർദം, ഉത്കണ്ഠ, ഉറക്കം, മാനസികാവസ്ഥ എന്നിവയ്ക്ക് കരുണയോടെയുള്ള സംഭാഷണവും അടുത്ത ഘട്ടങ്ങൾ ആസൂത്രണവും.',
+          bullets: [
+            'നിങ്ങളുടെ ചികിത്സാ പദ്ധതിയോട് ഇണങ്ങുന്ന മനസ്സ്–ശരീര സമീപനങ്ങൾ',
+            'ഉറക്കം, സമ്മർദം, ദൈനംദിന ക്രമം എന്നിവയ്ക്ക് ശ്രദ്ധ',
+            'സന്ദർശനങ്ങൾക്കിടയിൽ തുടർന്നുപോകാവുന്ന പ്രായോഗിക പിന്തുണ',
+          ],
+          image: 'https://images.unsplash.com/photo-1528715471579-d1bcf0ba5e83?auto=format&fit=crop&w=1400&q=80',
+          imageAlt: 'മാനസിക ആരോഗ്യത്തിനും വിശ്രമത്തിനുമുള്ള ശാന്തമായ അന്തരീക്ഷം',
+        },
+      ],
     },
     contactForm: {
       title: 'ബന്ധപ്പെടുക',
@@ -296,6 +462,8 @@ export const translations = {
       title: 'അപ്പോയിന്റ്മെന്റ് ബുക്ക് ചെയ്യുക',
       subtitle:
         'നിങ്ങളുടെ വിവരങ്ങളും നിങ്ങൾക്ക് സഹായം വേണ്ട അസുഖവും പങ്കിടുക. അനുയോജ്യമായ സമയം സ്ഥിരീകരിക്കാൻ ഞങ്ങൾ ബന്ധപ്പെടും.',
+      locationLabel: 'സ്ഥാനം',
+      instagramLabel: 'ഇൻസ്റ്റാഗ്രാം',
       hoursLabel: 'ക്ലിനിക് സമയം:',
       hoursValue: 'തിങ്കൾ–ശനി, രാവിലെ 9:00 – വൈകിട്ട് 6:00',
       phoneLabel: 'ഫോൺ:',

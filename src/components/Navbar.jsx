@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
 import { NavLink } from 'react-router-dom';
 import WhatsAppBookingButton from './WhatsAppBookingButton.jsx';
+import { CLINIC } from '../config/clinicInfo.js';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -43,7 +44,7 @@ export default function Navbar() {
             }}
           >
             <img
-              src="/alivio-logo.png"
+              src={CLINIC.logoSvg}
               alt="Alivio Homoeo Clinic logo"
               width={52}
               height={52}
@@ -115,7 +116,7 @@ export default function Navbar() {
                   <NavLink
                     key={l.to}
                     to={l.to}
-                    onClick={(e) => {
+                    onClick={() => {
                       setOpen(false);
                     }}
                     className={({ isActive }) =>
@@ -157,7 +158,7 @@ export default function Navbar() {
                 </div>
                 <a
                   href="/booking"
-                  onClick={(e) => {
+                  onClick={() => {
                     setOpen(false);
                   }}
                   className="mt-1 inline-flex items-center justify-center rounded-full bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-sm"

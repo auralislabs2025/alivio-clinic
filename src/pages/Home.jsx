@@ -2,8 +2,10 @@ import { useI18n } from '../i18n/I18nProvider.jsx';
 import { BadgeIcon } from '../components/icons.jsx';
 import ConditionsGrid from '../components/ConditionsGrid.jsx';
 import PatientJourneyTimeline from '../components/PatientJourneyTimeline.jsx';
-import YogaSection from '../components/YogaSection.jsx';
+import WellnessSliderSection from '../components/WellnessSliderSection.jsx';
+import HeroTaglineSlider from '../components/HeroTaglineSlider.jsx';
 import ContactSection from '../components/ContactSection.jsx';
+import { CLINIC } from '../config/clinicInfo.js';
 
 /** Hero banner image — `clinic/public/alivio-hero-reference.png` (replace file to swap artwork). */
 const HERO_BANNER = '/alivio-hero-reference.png';
@@ -43,6 +45,24 @@ export default function HomePage() {
       >
         <div className="mx-auto flex min-h-svh max-w-7xl items-center px-6 pt-24 md:pt-28">
           <div className="max-w-2xl rounded-2xl bg-black/25 p-6 text-center shadow-lg md:rounded-none md:bg-transparent md:p-0 md:text-left md:shadow-none">
+            <div className="mb-6 flex flex-col items-center gap-4 md:flex-row md:items-end md:justify-start md:gap-6">
+              <img
+                src={CLINIC.logoSvg}
+                alt=""
+                width={200}
+                height={56}
+                className="h-14 w-auto shrink-0 md:h-16"
+                loading="eager"
+                decoding="async"
+              />
+              <div className="w-full text-center md:text-left">
+                <p className="font-serif text-2xl font-bold tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.4)] sm:text-3xl">
+                  {t.hero.clinicName}
+                </p>
+                <HeroTaglineSlider />
+              </div>
+            </div>
+
             <p className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white">
               {t.hero.pill}
             </p>
@@ -81,7 +101,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <YogaSection />
+      <WellnessSliderSection />
       <ConditionsGrid />
       <PatientJourneyTimeline />
       <ContactSection prominentWhatsApp />

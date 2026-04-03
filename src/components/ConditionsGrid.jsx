@@ -32,8 +32,19 @@ export default function ConditionsGrid({ showHeader = true }) {
             return (
               <article
                 key={c.title}
-                className="group rounded-2xl border border-slate-900/10 bg-white/70 p-6 shadow-sm transition-transform duration-200 hover:scale-[1.02] active:scale-[1.01]"
+                className="group overflow-hidden rounded-2xl border border-slate-900/10 bg-white/70 shadow-sm transition-transform duration-200 hover:scale-[1.02] active:scale-[1.01]"
               >
+                {c.image ? (
+                  <img
+                    src={c.image}
+                    alt=""
+                    className="h-44 w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                    referrerPolicy="no-referrer"
+                  />
+                ) : null}
+                <div className="p-6">
                 <div className="flex items-center gap-4">
                   <span className="grid h-12 w-12 place-items-center rounded-2xl bg-primary-green/10 text-primary-green">
                     <Icon className="h-7 w-7" />
@@ -41,6 +52,7 @@ export default function ConditionsGrid({ showHeader = true }) {
                   <h3 className="text-lg font-semibold text-slate-950">{c.title}</h3>
                 </div>
                 <p className="mt-3 text-sm leading-relaxed text-slate-700">{c.desc}</p>
+                </div>
               </article>
             );
           })}
