@@ -45,6 +45,9 @@ export default function HomePage() {
       >
         <div className="mx-auto flex min-h-svh max-w-7xl items-center px-6 pt-24 md:pt-28">
           <div className="max-w-2xl rounded-2xl bg-black/25 p-6 text-center shadow-lg md:rounded-none md:bg-transparent md:p-0 md:text-left md:shadow-none">
+            <p className="mb-4 font-serif text-2xl font-bold tracking-tight text-white [text-shadow:0_2px_20px_rgba(0,0,0,0.45)] sm:mb-5 sm:text-3xl md:text-[1.75rem] md:leading-tight lg:text-4xl">
+              {t.hero.clinicName}
+            </p>
             <div className="mb-8 flex flex-col items-center gap-5 sm:flex-row sm:items-center sm:justify-start sm:gap-6 md:mb-10">
               <img
                 src={CLINIC.logoMark}

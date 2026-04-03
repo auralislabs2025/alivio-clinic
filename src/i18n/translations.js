@@ -17,6 +17,7 @@ export const translations = {
     },
     hero: {
       pill: 'Holistic homoeopathic care',
+      clinicName: 'Alivio Homoeo Clinic',
       taglineLabel: 'We focus on',
       taglineSlides: ['Homoeopathy', 'Yoga', 'Mental Wellness'],
       h1: 'FEEL THE HEALING TOUCH',
@@ -256,6 +257,7 @@ export const translations = {
     },
     hero: {
       pill: 'ഹോളിസ്റ്റിക് ഹോമിയോ ചികിത്സ',
+      clinicName: 'അലിവിയോ ഹോമിയോ ക്ലിനിക്',
       taglineLabel: 'ഞങ്ങളുടെ ശ്രദ്ധ',
       taglineSlides: ['ഹോമിയോപതി', 'യോഗ', 'മാനസിക ആരോഗ്യം'],
       h1: 'FEEL THE HEALING TOUCH',
