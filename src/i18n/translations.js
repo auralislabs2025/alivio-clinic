@@ -172,8 +172,8 @@ export const translations = {
             'Gentle support aligned with your body’s natural healing',
             'Clear follow-ups and adjustments as you improve',
           ],
-          image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1400&q=80',
-          imageAlt: 'Homoeopathic remedies and consultation setting',
+          image: '/homoeo-globules.png',
+          imageAlt: 'Homoeopathic globules in a glass bottle among moss and water',
         },
         {
           id: 'yoga',
@@ -420,8 +420,8 @@ export const translations = {
             'ശരീരത്തിന്റെ സ്വാഭാവിക ആരോഗ്യത്തെ മാനിക്കുന്ന നഴ്സാരമായ പിന്തുണ',
             'മെച്ചപ്പെടുമ്പോൾ ഫോളോ-അപ്പുകളും ക്രമീകരണങ്ങളും',
           ],
-          image: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1400&q=80',
-          imageAlt: 'ഹോമിയോപതി കൺസൾട്ടേഷനും മരുന്നുകളും',
+          image: '/homoeo-globules.png',
+          imageAlt: 'മോസ്സും വെള്ളവും നടുവിൽ ഗ്ലാസ് കുപ്പിയിലെ ഹോമിയോപതി ഗ്ലോബ്യൂളുകൾ',
         },
         {
           id: 'yoga',
