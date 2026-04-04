@@ -221,7 +221,10 @@ export const translations = {
       phonePlaceholder: '+91 ...',
       messagePlaceholder: 'Write your message',
       send: 'Send',
+      sending: 'Sending…',
       thanks: 'Thanks — we’ll get back to you shortly.',
+      errorSend: 'We couldn’t send your message. Please try WhatsApp or call us.',
+      errorNetwork: 'Connection failed. Check your internet or use WhatsApp.',
     },
     footer: {
       title: 'Book an Appointment',
@@ -469,7 +472,10 @@ export const translations = {
       phonePlaceholder: '+91 ...',
       messagePlaceholder: 'നിങ്ങളുടെ സന്ദേശം എഴുതുക',
       send: 'അയയ്ക്കുക',
+      sending: 'അയയ്ക്കുന്നു…',
       thanks: 'നന്ദി — ഉടൻ ഞങ്ങൾ മറുപടി നൽകും.',
+      errorSend: 'സന്ദേശം അയയ്ക്കാൻ കഴിഞ്ഞില്ല. WhatsApp അല്ലെങ്കിൽ ഫോൺ വഴി ബന്ധപ്പെടുക.',
+      errorNetwork: 'കണക്ഷൻ പരാജയപ്പെട്ടു. ഇന്റർനെറ്റ് പരിശോധിക്കുക അല്ലെങ്കിൽ WhatsApp ഉപയോഗിക്കുക.',
     },
     footer: {
       title: 'അപ്പോയിന്റ്മെന്റ് ബുക്ക് ചെയ്യുക',

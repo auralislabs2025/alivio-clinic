@@ -19,10 +19,34 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
 
   const isDark = variant === 'dark';
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
-    setStatus({ type: 'success', message: t.contactForm.thanks });
-    e.currentTarget.reset();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const payload = {
+      name: String(fd.get('name') ?? ''),
+      phone: String(fd.get('phone') ?? ''),
+      visitDate: String(fd.get('visitDate') ?? ''),
+      visitSlot: String(fd.get('visitSlot') ?? ''),
+      message: String(fd.get('message') ?? ''),
+    };
+
+    setStatus({ type: 'sending', message: '' });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) {
+        setStatus({ type: 'error', message: t.contactForm.errorSend });
+        return;
+      }
+      form.reset();
+      setStatus({ type: 'success', message: t.contactForm.thanks });
+    } catch {
+      setStatus({ type: 'error', message: t.contactForm.errorNetwork });
+    }
   };
 
   return (
@@ -250,17 +274,31 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
 
             <button
               type="submit"
+              disabled={status.type === 'sending'}
+              aria-busy={status.type === 'sending'}
               className={
                 isDark
-                  ? 'inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold shadow-sm transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] text-primary-blue'
-                  : 'inline-flex w-full items-center justify-center rounded-full bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue'
+                  ? 'inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold shadow-sm transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] text-primary-blue disabled:cursor-not-allowed disabled:opacity-60'
+                  : 'inline-flex w-full items-center justify-center rounded-full bg-primary-blue px-6 py-3 text-sm font-semibold text-white shadow-sm transition-transform duration-200 hover:scale-[1.01] active:scale-[0.99] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-blue disabled:cursor-not-allowed disabled:opacity-60'
               }
             >
-              {t.contactForm.send}
+              {status.type === 'sending' ? t.contactForm.sending : t.contactForm.send}
             </button>
 
-            <p id={`${formId}-status`} role="status" className={isDark ? 'text-sm text-white/85' : 'text-sm text-slate-700'}>
-              {status.type === 'success' ? status.message : ' '}
+            <p
+              id={`${formId}-status`}
+              role="status"
+              className={
+                status.type === 'error'
+                  ? isDark
+                    ? 'text-sm font-medium text-amber-200'
+                    : 'text-sm font-medium text-amber-800'
+                  : isDark
+                    ? 'text-sm text-white/85'
+                    : 'text-sm text-slate-700'
+              }
+            >
+              {status.type === 'success' || status.type === 'error' ? status.message : '\u00a0'}
             </p>
           </form>
         </div>
