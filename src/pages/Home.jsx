@@ -5,6 +5,7 @@ import PatientJourneyTimeline from '../components/PatientJourneyTimeline.jsx';
 import WellnessSliderSection from '../components/WellnessSliderSection.jsx';
 import HeroTaglineSlider from '../components/HeroTaglineSlider.jsx';
 import ContactSection from '../components/ContactSection.jsx';
+import FadeInSection from '../components/FadeInSection.jsx';
 import { CLINIC } from '../config/clinicInfo.js';
 
 /** Hero banner image — `clinic/public/alivio-hero-reference.png` (replace file to swap artwork). */
@@ -32,9 +33,10 @@ export default function HomePage() {
 
   return (
     <>
-      <section
+      <FadeInSection
         className="relative min-h-svh overflow-hidden bg-background-warm"
         aria-labelledby="alivio-hero-title"
+        rootMargin="0px 0px 0px 0px"
         style={{
           /* Original shared image only — no gradient overlays (avoids muddy/noisy look over the photo). */
           backgroundImage: `url('${HERO_BANNER}')`,
@@ -99,7 +101,7 @@ export default function HomePage() {
             <TrustBadges />
           </div>
         </div>
-      </section>
+      </FadeInSection>
 
       <WellnessSliderSection />
       <ConditionsGrid />

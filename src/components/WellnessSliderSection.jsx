@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
+import FadeInSection from './FadeInSection.jsx';
 import { LeafIcon } from './icons.jsx';
 
 const AUTO_MS = 6500;
@@ -33,7 +34,7 @@ export default function WellnessSliderSection() {
   const slide = slides[active];
 
   return (
-    <section aria-labelledby="wellness-slider-title" className="bg-background-warm">
+    <FadeInSection aria-labelledby="wellness-slider-title" className="bg-background-warm">
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-18">
         <div className="flex flex-col items-center text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary-green">{t.wellnessSlider.eyebrow}</p>
@@ -136,6 +137,6 @@ export default function WellnessSliderSection() {
           to { opacity: 1; transform: translateY(0); }
         }
       `}</style>
-    </section>
+    </FadeInSection>
   );
 }

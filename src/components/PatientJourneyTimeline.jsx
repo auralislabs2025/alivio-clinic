@@ -1,4 +1,5 @@
 import { useI18n } from '../i18n/I18nProvider.jsx';
+import FadeInSection from './FadeInSection.jsx';
 
 function Step({ idx, title, desc }) {
   return (
@@ -19,7 +20,7 @@ export default function PatientJourneyTimeline() {
   const { t } = useI18n();
 
   return (
-    <section aria-labelledby="journey-title" className="bg-background-warm">
+    <FadeInSection aria-labelledby="journey-title" className="bg-background-warm">
       <div className="mx-auto max-w-7xl px-6 py-14 md:py-18">
         <div className="text-center">
           <p className="text-sm font-semibold uppercase tracking-wider text-primary-green">{t.journey.eyebrow}</p>
@@ -41,7 +42,7 @@ export default function PatientJourneyTimeline() {
           </ol>
         </div>
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

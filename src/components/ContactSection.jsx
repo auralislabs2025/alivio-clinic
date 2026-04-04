@@ -1,5 +1,6 @@
 import { useId, useMemo, useState } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
+import FadeInSection from './FadeInSection.jsx';
 import WhatsAppBookingButton from './WhatsAppBookingButton.jsx';
 import { CLINIC } from '../config/clinicInfo.js';
 import { MapPinIcon } from './icons.jsx';
@@ -81,7 +82,7 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
   };
 
   return (
-    <section
+    <FadeInSection
       id="contact"
       className={`scroll-mt-24 ${isDark ? 'bg-primary-blue text-white' : 'bg-background-warm text-slate-950'}`}
       aria-labelledby={`${formId}-title`}
@@ -339,7 +340,7 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
           </form>
         </div>
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 

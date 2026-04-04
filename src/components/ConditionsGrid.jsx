@@ -1,5 +1,6 @@
 import { useMemo } from 'react';
 import { useI18n } from '../i18n/I18nProvider.jsx';
+import FadeInSection from './FadeInSection.jsx';
 import { DropIcon, HeartIcon, LeafIcon } from './icons.jsx';
 
 const iconByKey = {
@@ -14,7 +15,7 @@ export default function ConditionsGrid({ showHeader = true }) {
   const items = useMemo(() => t.conditions.items, [t]);
 
   return (
-    <section
+    <FadeInSection
       id="conditions"
       className="scroll-mt-24 bg-background-warm"
       aria-labelledby={showHeader ? 'conditions-title' : undefined}
@@ -62,7 +63,7 @@ export default function ConditionsGrid({ showHeader = true }) {
           })}
         </div>
       </div>
-    </section>
+    </FadeInSection>
   );
 }
 
