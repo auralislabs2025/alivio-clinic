@@ -13,8 +13,8 @@ export const CLINIC = {
     encodeURIComponent(
       'Alivio Homoeo Clinic, Opp. Govt Higher Secondary School, Njekkad, Varkala, Kerala 695143, India',
     ),
-  instagramUrl: 'https://www.instagram.com/',
-  instagramHandle: '@aliviohomoeo',
+  instagramUrl: 'https://www.instagram.com/alivio_homoeo_clinic?igsh=ZnR1MGJ2YnFhZWJx',
+  instagramHandle: '@alivio_homoeo_clinic',
   developerSiteUrl: 'https://aulab.in',
   /** Main logo — `public/alivio-logo.png` (circular clinic emblem). */
   logoSvg: '/alivio-logo.png',
