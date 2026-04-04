@@ -24,12 +24,27 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
     const form = e.currentTarget;
     const fd = new FormData(form);
     const payload = {
-      name: String(fd.get('name') ?? ''),
-      phone: String(fd.get('phone') ?? ''),
-      visitDate: String(fd.get('visitDate') ?? ''),
-      visitSlot: String(fd.get('visitSlot') ?? ''),
-      message: String(fd.get('message') ?? ''),
+      name: String(fd.get('name') ?? '').trim(),
+      phone: String(fd.get('phone') ?? '').trim(),
+      visitDate: String(fd.get('visitDate') ?? '').trim(),
+      visitSlot: String(fd.get('visitSlot') ?? '').trim(),
+      message: String(fd.get('message') ?? '').trim(),
     };
+
+    if (!payload.name || !payload.phone || !payload.visitDate || !payload.visitSlot || !payload.message) {
+      setStatus({ type: 'error', message: t.contactForm.validationForm });
+      return;
+    }
+
+    if (payload.visitSlot !== 'morning' && payload.visitSlot !== 'afternoon') {
+      setStatus({ type: 'error', message: t.contactForm.validationForm });
+      return;
+    }
+
+    if (payload.visitDate < minVisitDate) {
+      setStatus({ type: 'error', message: t.contactForm.validationDate });
+      return;
+    }
 
     setStatus({ type: 'sending', message: '' });
     try {
@@ -38,10 +53,26 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) {
+
+      const ct = res.headers.get('content-type') ?? '';
+      if (!ct.includes('application/json')) {
+        setStatus({ type: 'error', message: t.contactForm.invalidServerResponse });
+        return;
+      }
+
+      let data;
+      try {
+        data = await res.json();
+      } catch {
+        setStatus({ type: 'error', message: t.contactForm.invalidServerResponse });
+        return;
+      }
+
+      if (!res.ok || data?.ok !== true) {
         setStatus({ type: 'error', message: t.contactForm.errorSend });
         return;
       }
+
       form.reset();
       setStatus({ type: 'success', message: t.contactForm.thanks });
     } catch {
@@ -158,7 +189,12 @@ export default function ContactSection({ variant = 'light', prominentWhatsApp = 
         </div>
 
         <div className={isDark ? 'rounded-2xl bg-white/10 p-6 shadow-sm ring-1 ring-white/15' : 'rounded-2xl border border-slate-900/10 bg-white/70 p-6 shadow-sm'}>
-          <form onSubmit={onSubmit} className="space-y-4" aria-describedby={`${formId}-status`}>
+          <form
+            noValidate
+            onSubmit={onSubmit}
+            className="space-y-4"
+            aria-describedby={`${formId}-status`}
+          >
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor={`${formId}-name`} className={isDark ? 'block text-sm font-semibold text-white' : 'block text-sm font-semibold text-slate-950'}>

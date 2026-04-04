@@ -225,6 +225,9 @@ export const translations = {
       thanks: 'Thanks — we’ll get back to you shortly.',
       errorSend: 'We couldn’t send your message. Please try WhatsApp or call us.',
       errorNetwork: 'Connection failed. Check your internet or use WhatsApp.',
+      validationForm: 'Please complete all fields, choose a visit date, and select morning or afternoon.',
+      validationDate: 'Visit date must be today or later.',
+      invalidServerResponse: 'The server returned an unexpected response. Try again or use WhatsApp.',
     },
     footer: {
       title: 'Book an Appointment',
@@ -476,6 +479,9 @@ export const translations = {
       thanks: 'നന്ദി — ഉടൻ ഞങ്ങൾ മറുപടി നൽകും.',
       errorSend: 'സന്ദേശം അയയ്ക്കാൻ കഴിഞ്ഞില്ല. WhatsApp അല്ലെങ്കിൽ ഫോൺ വഴി ബന്ധപ്പെടുക.',
       errorNetwork: 'കണക്ഷൻ പരാജയപ്പെട്ടു. ഇന്റർനെറ്റ് പരിശോധിക്കുക അല്ലെങ്കിൽ WhatsApp ഉപയോഗിക്കുക.',
+      validationForm: 'എല്ലാ ഫീൽഡുകളും പൂരിപ്പിക്കുക, സന്ദർശന തീയതിയും രാവിലെ/വൈകുന്നേരം സമയവും തിരഞ്ഞെടുക്കുക.',
+      validationDate: 'സന്ദർശന തീയതി ഇന്നോ അതിന് ശേഷമോ ആയിരിക്കണം.',
+      invalidServerResponse: 'സെർവർ പ്രതീക്ഷിക്കാത്ത മറുപടി നൽകി. വീണ്ടും ശ്രമിക്കുക അല്ലെങ്കിൽ WhatsApp ഉപയോഗിക്കുക.',
     },
     footer: {
       title: 'അപ്പോയിന്റ്മെന്റ് ബുക്ക് ചെയ്യുക',
